@@ -41,6 +41,36 @@ h1 {
 		padding:0;
 	}
 }
+.top {
+	-webkit-animation-name: top; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: top;
+    animation-duration: 4s;
+}
+.bottom {
+	-webkit-animation-name: bottom; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: bottom;
+    animation-duration: 4s;
+    
+    
+}
+@-webkit-keyframes top {
+    from {margin-top:-100%;}
+    to {margin-top:0%;}
+}
+@-webkit-keyframes bottom {
+    from {margin-top:100%;}
+    to {margin-top:0%;}
+}
+@-webkit-keyframes left {
+    from {margin-left:-100%;}
+    to {margin-left:0%;}
+}
+@-webkit-keyframes right {
+    from {margin-left:100%;}
+    to {margin-left:0%;}
+}
 .page {
 	display: none;
 	font-family: 'Lato', sans-serif;
