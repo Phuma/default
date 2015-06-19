@@ -14,23 +14,23 @@
 		</section>
 		<article class="page col-md-12">
 			<section class="col-sm-6">
-				<div class="full case">
+				<div class="left full case">
 					
 				</div>
 			</section>
 			<section class="col-md-6">
 				<section class="threefractions col-md-12">
-					<div class="full desc">
+					<div class="top full desc">
 						<h1>Case</h1>
 					</div>
 				</section>
 				<section class="onefractions col-md-6">
-					<div class="full link">
+					<div class="bottom full link">
 						
 					</div>
 				</section>
 				<section class="onefractions col-md-6">
-					<div class="full back">
+					<div class="right full back">
 						
 					</div>
 				</section>
