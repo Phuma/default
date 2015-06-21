@@ -10,27 +10,49 @@
 	
 	<body class="row">
 		<section class="loader">
-			<h1>Phuma Studio</h1>
+			<h1>Mark Sørensen</h1>
 		</section>
-		<article class="page col-md-12">
+		<article class="page col-sm-12">
 			<section class="col-sm-6">
-				<div class="left full case">
-					
+				<div class="col-sm-12 left full case">
+					<div class="btn">Contact me</div>
+				</div>
+				<div class="col-sm-12 full email">
+					<div class="btn-close"></div>
+					<form>
+						<div class="input">						
+							<input type="email" id="email" placeholder="E-mail" autocomplete="off">
+						</div>
+						<div class="input">
+							<input type="text" id="subject" placeholder="Subject" autocomplete="off">				
+						</div>
+						<div class="input">							
+							<textarea rows="5" type="text" id="msg" placeholder="Message"></textarea>
+						</div>
+						<button class="submit">Send E-mail</button>
+					</form>
+					<div class="thankyou">
+						<h1>Thank You!</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id ligula a sapien dignissim fermentum. Proin lacus arcu, cursus ut accumsan eget, venenatis sed lorem.</p>
+					</div>
 				</div>
 			</section>
-			<section class="col-md-6">
-				<section class="threefractions col-md-12">
-					<div class="top full desc">
-						<h1>Case</h1>
+			<section class="col-sm-6">
+				<section class="threefractions col-sm-12">
+					<div class="top full desc col-sm-12">
+						<div class="text">
+							<h1>Case</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id ligula a sapien dignissim fermentum. Proin lacus arcu, cursus ut accumsan eget, venenatis sed lorem.</p>
+						</div>
 					</div>
 				</section>
-				<section class="onefractions col-md-6">
-					<div class="bottom full link">
+				<section class="onefractions col-sm-6">
+					<div class="bottom full link col-sm-12">
 						
 					</div>
 				</section>
-				<section class="onefractions col-md-6">
-					<div class="right full back">
+				<section class="onefractions col-sm-6">
+					<div class="right full back col-sm-12">
 						
 					</div>
 				</section>
@@ -43,8 +65,35 @@
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
 			    $( ".loader" ).delay(2000).fadeOut(400, function(){
-			    	$( ".page" ).fadeIn(400);
-			    });  
+			    	$( "article" ).fadeIn(400);
+			    }); 
+			    $(".top").on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e){
+				    $(".desc h1").delay(500).fadeIn();
+				    $(".desc p").delay(500).fadeIn();
+				});
+				$(".btn").click(function() {
+				 $(".email").removeClass("email-out").addClass("email-in").fadeIn();
+				});
+				$(".btn-close").click(function() {
+				 $(".email").removeClass("email-in").addClass("email-out").fadeOut();
+				});
+				
+				$('.submit').click(function() {
+					var email = $("input#email").val();
+					var subject = $("input#subject").val();
+					var msg = $("input#msg").val();
+					var dataString = 'email='+ email + '&subject=' + subject + '&msg=' + msg;
+					$.ajax({
+						type:'POST',
+						url:'email.php',
+						data: dataString,
+						success: function() {
+							$('form').hide();
+							$('.thankyou').show()
+				 		},
+					})
+					return false;
+				});
 			});
 			
 		</script>
