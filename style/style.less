@@ -7,17 +7,101 @@
 @screen-md-min:992px;
 @screen-lg-min:1200px;
 
-	::selection {
-	  background: #2BD9B9; /* WebKit/Blink Browsers */
+body {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 3rem;
+	color:#FFFFFF;
+}
+::selection {
+  background: #E7BBC7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #E7BBC7; /* Gecko Browsers */
+}
+::-webkit-input-placeholder {
+   color: #FFF;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFF;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFF;  
+}
+
+:-ms-input-placeholder {  
+   color: #FFF;  
+}
+
+.btn, .btn-close {
+	color:#000000;
+}
+.btn, .submit {
+	text-align: center;
+	line-height: 3rem;
+	font-size: 3rem;
+	border-bottom: 1px solid #000000;
+	border-radius: 0px;
+	margin-left:-75px;
+	position: absolute;
+	bottom:10%;
+	left:50%;
+	transition: all 1s ease;
+	&:hover {
+		color:#FFFFFF;
+		border-bottom-color: #FFFFFF;
 	}
-	::-moz-selection {
-	  background: #2BD9B9; /* Gecko Browsers */
+}
+.btn-close {
+	background: url(../img/close.svg) no-repeat;
+	width: 50px;
+	height: 50px;
+	float:right;
+	margin:10px 10px;
+	cursor: pointer;
+	opacity: 0.2;
+	transition: all 1s ease;
+	&:hover {
+		opacity: 1;
 	}
+}
+
+form {
+	margin-top: -100px;
+	padding-top: 43%;
+	text-align: center;
+	input, textarea {
+		width: 100%;
+		border-bottom: 1px solid #000000;
+		border-top:none;
+		border-left: none;
+		border-right: none;
+		transition: all 1s ease;
+		background-color: transparent;
+		padding:10px;
+	}
+	input:focus, textarea:focus {
+		outline: none;
+		//border-bottom: 1px solid #000000;
+		border-bottom-color: white;
+	}
+	.submit {
+		background: none;
+		border-left:none;
+		border-right:none;
+		border-top:none;
+		color:black; 
+	}
+	button:focus {
+		outline: none;
+	}
+}
 
 h1 {
-	font-family: 'Abril Fatface', cursive;
 	margin:0;
-	color:black;
+	color:white;
+	font-size: 5rem;
 }
 .loader {
 	width: 100%;
@@ -29,7 +113,8 @@ h1 {
 	overflow: hidden;
 	background: #ffffff;
 	h1 {
-		font-size: 10rem;
+		color:black;
+		font-size: 8rem;
 		@media (min-width:@screen-sm-min) {
 			font-size: 20rem;
 		}
@@ -37,23 +122,68 @@ h1 {
 }
 .row {
 	margin:0;
-	.col-sm-12 {
-		padding:0;
-	}
 }
 .top {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	backface-visibility: hidden;
+	perspective: 1000;
 	-webkit-animation-name: top; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-name: top;
-    animation-duration: 4s;
+    animation-duration: 1s;
 }
 .bottom {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	backface-visibility: hidden;
+	perspective: 1000;
 	-webkit-animation-name: bottom; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-name: bottom;
-    animation-duration: 4s;
-    
-    
+    animation-duration: 1s;   
+}
+.left {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	backface-visibility: hidden;
+	perspective: 1000;
+	-webkit-animation-name: left; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: left;
+    animation-duration: 1s;   
+}
+.right {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	backface-visibility: hidden;
+	perspective: 1000;
+	-webkit-animation-name: right; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: right;
+    animation-duration: 1s;   
+}
+.email-in {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	backface-visibility: hidden;
+	perspective: 1000;
+	-webkit-animation-name: email-in; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: email-in;
+    animation-duration: 1s;
+    margin-left:0% !important; 
+}
+.email-out {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	backface-visibility: hidden;
+	perspective: 1000;
+	-webkit-animation-name: email-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: email-out;
+    animation-duration: 1s;
+    margin-left:-100% !important; 
 }
 @-webkit-keyframes top {
     from {margin-top:-100%;}
@@ -71,15 +201,23 @@ h1 {
     from {margin-left:100%;}
     to {margin-left:0%;}
 }
-.page {
-	display: none;
-	font-family: 'Lato', sans-serif;
+@-webkit-keyframes email-in {
+    from {margin-left:-100%;}
+    to {margin-left:0%;}
+}
+@-webkit-keyframes email-out {
+    from {margin-left:0%;}
+    to {margin-left:-100%;}
 }
 article {
+	display: none;
 	height: 100%;
 	width: 100%;
 	position: absolute !important;
 	padding:0 !important;
+	@media (min-width: @screen-sm-min) {
+		overflow:hidden;
+	}
 	.col-sm-3 {
 		padding:0;
 	}
@@ -95,20 +233,63 @@ article {
 			height: 75%;
 		}
 		.onefractions {
-			width: 50%;
+			width: 100%;
 			height: 25%;
+			@media (min-width:@screen-sm-min) {
+				width: 50%;
+			}
 		}
 		.case {
-			background-color: blue;
+			background: url(../img/image.jpeg) no-repeat;
+			background-size:cover;
+			// If the image needs a flip?
+			/*-moz-transform: scaleX(-1);
+	        -o-transform: scaleX(-1);
+	        -webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
+	        filter: FlipH;
+	        -ms-filter: "FlipH";*/
 		}
 		.desc {
-			background-color: green;
+			.text {
+				height: 200px;
+				margin-top: -100px;
+				padding-top: 43%;
+				h1 {
+				display: none;
+				}
+				p {
+					display: none;
+				}
+			}
+			text-align: center;
+			background-color: #7A9BA4;
 		}
 		.link {
-			background-color: red;
+			background-color: #83A7B1;
 		}
 		.back {
-			background-color: black;
+			background-color: #22343F;
 		}
-	}
+		.email {
+			background: #CA88A0;
+			margin-left:-100%;
+			position: absolute;
+			top:0;
+			display: none;
+			.thankyou {
+				display: none;
+				height: 200px;
+				margin-top: -100px;
+				padding-top: 43%;
+				text-align: center;
+			}
+			::selection {
+				background: #DAE9EF; /* WebKit/Blink Browsers */
+			}
+			::-moz-selection {
+				background: #DAE9EF; /* Gecko Browsers */
+			}
+		}
+	}	
 }
