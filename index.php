@@ -12,13 +12,14 @@
 		<section class="loader">
 			<h1>Mark Sørensen</h1>
 		</section>
-		<article class="page col-sm-12">
-			<section class="col-sm-6">
-				<div class="col-sm-12 left full case">
+		<article class="page col-md-12">
+			<section class="col-md-6">
+				<div class="col-md-12 left full case">
 					<div class="btn">Contact me</div>
 				</div>
-				<div class="col-sm-12 full email">
+				<div class="col-md-12 full email">
 					<div class="btn-close"></div>
+					<h1>Contact me</h1>
 					<form>
 						<div class="input">						
 							<input type="email" id="email" placeholder="E-mail" autocomplete="off">
@@ -33,27 +34,31 @@
 					</form>
 					<div class="thankyou">
 						<h1>Thank You!</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id ligula a sapien dignissim fermentum. Proin lacus arcu, cursus ut accumsan eget, venenatis sed lorem.</p>
+						<p>
+							Do you really read this? 
+							<br />
+							I will be like Flash when I see your E-mail, and write you back as fast as possible.
+						</p>
 					</div>
 				</div>
 			</section>
-			<section class="col-sm-6">
-				<section class="threefractions col-sm-12">
-					<div class="top full desc col-sm-12">
+			<section class="col-md-6">
+				<section class="threefractions col-md-12">
+					<div class="top full desc col-md-12">
 						<div class="text">
-							<h1>Case</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id ligula a sapien dignissim fermentum. Proin lacus arcu, cursus ut accumsan eget, venenatis sed lorem.</p>
+							<h1>Who am I?</h1>
+							<p>I'm currently working at <a href="//trackman.dk" target="_blank">TrackMan</a> as an Front-end Developer.</p>
 						</div>
 					</div>
 				</section>
-				<section class="onefractions col-sm-6">
-					<div class="bottom full link col-sm-12">
-						
+				<section class="onefractions col-md-6">
+					<div class="bottom full link col-md-12">
+
 					</div>
 				</section>
-				<section class="onefractions col-sm-6">
-					<div class="right full back col-sm-12">
-						
+				<section class="onefractions col-md-6">
+					<div class="right full back col-md-12">
+						<h1>in</h1>
 					</div>
 				</section>
 			</section>
