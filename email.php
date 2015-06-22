@@ -8,6 +8,6 @@
 	
 	$headers = "From: $email_from";
 	
-	//mail($to,$email_subject,$email_body,$headers);
+	mail($to,$email_subject,$email_body,$headers);
 	
 ?>
