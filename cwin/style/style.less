@@ -1,0 +1,276 @@
+@light-green:#BFD6C5;
+@med-green:#5CA478;
+@normal-green:#007A38;
+
+@bootstrap-sm:768px;
+@bootstrap-md:992px;
+@bootstrap-lg:1200px;
+
+@keyframes arrow {
+	0%, 4%, 10%, 16%, 20% {
+		margin-top:0;
+	}
+	8% {
+		margin-top:-30px;
+	}
+	12% {
+		margin-top:-15px;
+	}
+	100% {
+		margin-top:0;
+	}
+}
+@-webkit-keyframes arrow {
+	0%, 4%, 10%, 16%, 20% {
+		margin-top:0;
+	}
+	8% {
+		margin-top:-30px;
+	}
+	12% {
+		margin-top:-15px;
+	}
+	100% {
+		margin-top:0;
+	}
+}
+
+::selection {
+	background:@med-green;
+}
+
+* {
+	font-family: 'Lato';
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+html, body {
+	height: 100%;
+}
+a {
+	color:@normal-green;
+	opacity: 1;
+	text-decoration: none;
+	transition:all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	outline: none !important;
+	&:hover, &:focus {
+		opacity: 1;
+		color: @normal-green;
+	}
+	.icon {
+	    height: 40px;
+		margin-top: 5px;
+		transition:all 1s ease;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		display: block;
+		width: 100%;
+		&:hover {
+			fill:@normal-green;
+		}
+	}
+}
+.no-padding {
+	padding:0;
+}
+.no-margin {
+	margin:0;
+}
+.container-fluid {
+	margin:0;
+	padding:0;
+	h1 {
+		font-family: 'Lato';
+		font-size: 25px;
+		line-height: 30px;
+		font-weight: 300;
+		&.quote {
+			color:white;
+			position: absolute;
+			font-weight:300;
+			text-align: center;
+			width: 100%;
+			font-size: 35px !important;
+			line-height: 50px !important;
+			margin-top:-25px;
+			top:175px;
+			@media (min-width:@bootstrap-sm)
+			{
+				font-size:55px !important;
+				line-height: 60px !important;
+				margin-top:-30px !important;
+				top:275px;
+			}
+			@media (min-width:@bootstrap-md)
+			{
+				font-size:70px !important;
+				line-height: 100px !important;
+				margin-top:-50px !important;
+			}
+		}
+	}
+	
+	section {
+		&.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		&.fullscreenimage {
+			opacity: 0;
+			transition:all 1s ease;
+			-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			background: url(/../image/cwin-friends.jpg) no-repeat center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			-webkit-transform:translatez(0);
+			overflow:hidden;
+			.logo {
+				transition:all 3s ease;
+				-webkit-transition: all 3s ease;
+				-moz-transition: all 3s ease;
+				opacity: 0;
+				position: absolute;
+				top:50%;
+				left:50%;
+			    background-color: white;
+			    margin-top:-125px;
+				margin-left:-125px;
+				height: 250px;
+				width: 250px;
+				border-radius: 125px;
+			    -webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				text-align: center;
+				@media (min-width:@bootstrap-sm) {
+					margin-top:-175px;
+					margin-left:-175px;
+					height: 350px;
+					width: 350px;
+					border-radius: 175px;
+				}
+				img {
+					width: 200px;
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+					@media (min-width:@bootstrap-sm) {
+						width: 300px;
+					}
+				}
+			}
+			.anchor {
+				position: absolute;
+				width: 50px;
+				height:50px;
+				left:50%;
+				bottom: 0;
+				margin-left:-12px;
+				cursor: pointer;
+				@media (min-width:@bootstrap-sm) {
+					width: 100px;
+					height:100px;
+				}
+				&:before {
+					animation: arrow 10s infinite;
+					-webkit-animation: arrow 10s infinite;
+					content: "";
+					height: 25px;
+					width: 25px;
+					border-left: 1px solid white;
+					border-top: 1px solid white;
+					transform: rotate(226deg);
+					display: block;
+					@media (min-width:@bootstrap-sm) {
+						height: 50px;
+						width: 50px;
+					}
+				}
+			}
+		}
+		&.bgimage {
+		    min-height: 350px;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+			background: url(/../image/cwin-friend-of-denmark.jpg) no-repeat center center fixed; 
+			@media (min-width:@bootstrap-sm) {
+				min-height: 550px;
+			}
+		}
+		&.text {
+			height: auto;
+			opacity: 0;
+			transition:all 2s ease;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			.paragraf {
+				margin:20px 0 20px 0;
+				@media (min-width:@bootstrap-sm) {
+					margin:50px 0 70px 0;
+				}
+				&.no-heading {
+					margin:20px 0 40px 0;
+					@media (min-width:@bootstrap-sm) {
+						margin:110px 0 70px 0;
+					}
+				}
+				&.links {
+					margin:20px 0 0 0;
+					&:first-child {
+						margin-top:40px;
+						@media (min-width:@bootstrap-sm) {
+							margin-top:70px;
+						}
+					}
+					&:last-child {
+						margin-bottom: 40px;
+						@media (min-width:@bootstrap-sm) {
+							margin-bottom:70px;
+						}
+					}
+					p {
+						text-align: center;
+					}
+					a {
+						//display: block;
+						&.tel {
+							
+						}
+					}
+					
+					@media (min-width:@bootstrap-sm) {
+						margin:70px 0 70px 0;
+					}
+				}
+			}
+		}
+		&.section-one {
+			div {
+				&:first-child {
+					margin-bottom: 0 !important;
+					@media (min-width:@bootstrap-sm)
+					{
+						margin-bottom: 70px !important;
+					}
+				}
+				&:last-child {
+					margin-top:0 !important;
+					@media (min-width:@bootstrap-sm)
+					{
+						margin-top: 110px !important;
+					}
+				}
+			}
+		}
+	}
+}
