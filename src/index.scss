@@ -2,14 +2,11 @@
 
 body {
   margin: 0;
-  font-family: 'Oxygen', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border:1px solid black;
-  margin:20px;
   height: calc(100vh - 42px);
   width: calc(100vw - 42px);
   font-weight: 300;
+  background: #111;
+  overflow:hidden;
 }
 
 h1 {
@@ -19,9 +16,5 @@ h1 {
   font-size:50px;
   margin:0 10px;
   text-align: center;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  color:white;
 }
